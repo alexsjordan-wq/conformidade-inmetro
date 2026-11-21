@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Triagem de registro Inmetro do catálogo — como funciona</title>
+<meta name="description" content="Conferência de registro Inmetro por código de barras: faça você mesmo pela base pública ou peça a triagem do catálogo inteiro, com prioridade para o que exige ação imediata.">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="index.html">Conformidade<span>Inmetro</span></a>
+    <nav>
+      <a href="notificacao-inmetro.html">Fui notificado</a>
+      <a href="produtos-que-exigem-registro.html">O que exige registro</a>
+      <a href="triagem.html">Triagem</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<article class="bloco" style="padding-top:38px">
+  <p class="olho">Triagem de catálogo</p>
+  <h1 style="font-size:clamp(27px,5.2vw,38px);line-height:1.14;letter-spacing:-.025em;margin:0 0 18px">
+    Um produto você confere em um minuto. Duzentos, não.</h1>
+  <p style="font-size:19px;color:var(--cinza)">A conferência de um código de barras é
+  gratuita e você faz sozinho. O problema aparece quando o catálogo tem centenas de
+  itens — e o prazo é de 48 horas.</p>
+</article>
+
+<section class="bloco destaque">
+  <h2>Opção 1 — Conferir um produto agora (grátis)</h2>
+  <p>Vá direto na fonte oficial. Não precisa de cadastro.</p>
+  <div class="consulta">
+    <label for="ean">Código de barras (EAN) do produto</label>
+    <input id="ean" inputmode="numeric" placeholder="13 dígitos, ex.: 7898490163472" maxlength="20">
+    <button type="button" onclick="abrirConsulta()">Abrir consulta no site do Inmetro</button>
+    <div id="resultado"></div>
+  </div>
+  <p class="fonte">A consulta acontece no site oficial do Inmetro — este site apenas
+  monta o link com o seu código. A base não permite consulta automática de fora,
+  então a leitura do resultado é feita por você, na página oficial.</p>
+</section>
+
+<section class="bloco">
+  <h2>O que o resultado significa</h2>
+  <table>
+    <tr><th>Situação</th><th>Leitura</th><th>O que fazer</th></tr>
+    <tr><td><code>A</code> Ativo</td><td>Registro válido.</td><td>Guarde o comprovante com data.</td></tr>
+    <tr><td><code>A*</code> Ativo com restrição</td><td>Válido, com pendência.</td><td>Confirme com o fornecedor.</td></tr>
+    <tr><td><code>S</code> Suspenso</td><td><strong>Não pode ser vendido.</strong></td><td>Retire o anúncio até regularizar.</td></tr>
+    <tr><td><code>C</code> Cancelado</td><td><strong>Não pode ser vendido.</strong></td><td>Retire o anúncio; cancelamento não é reversível.</td></tr>
+    <tr><td><code>I</code> Inativo</td><td>Sem validade atual.</td><td>Confirme antes de manter o anúncio.</td></tr>
+    <tr><td>Nada encontrado</td><td>Sem registro para esse código.</td><td>Confira se a categoria exige registro.</td></tr>
+  </table>
+  <p class="fonte">Situação suspensa ou cancelada impede a comercialização mesmo que o
+  selo esteja impresso na embalagem.</p>
+</section>
+
+<section class="bloco destaque">
+  <h2>Opção 2 — Triagem do catálogo inteiro</h2>
+  <p>Para quem tem muitos produtos. Você exporta a planilha do marketplace e recebe
+  um relatório com a situação de cada código, dividido por consequência — e não por
+  ordem alfabética.</p>
+
+  <table>
+    <tr><th>O que entra no relatório</th><th>Para quê</th></tr>
+    <tr><td><strong>Ação imediata</strong> — registro suspenso ou cancelado</td>
+      <td>São os que não podem ser vendidos. Retirar hoje.</td></tr>
+    <tr><td><strong>Verificar antes de anunciar</strong> — ativo com restrição ou inativo</td>
+      <td>Existe registro, mas há pendência.</td></tr>
+    <tr><td><strong>Sem registro localizado</strong> — separado por categoria</td>
+      <td>Para não confundir “não exige registro” com “está irregular”.</td></tr>
+    <tr><td><strong>Confirmados</strong> — registro ativo</td>
+      <td>Comprovante para guardar e apresentar.</td></tr>
+  </table>
+
+  <h3 style="margin-top:28px">Como pedir</h3>
+  <ol style="padding-left:22px">
+    <li style="margin-bottom:12px">Você exporta a planilha de produtos do marketplace
+      (Mercado Livre, Shopee ou Amazon — todos têm exportação).</li>
+    <li style="margin-bottom:12px">Separa <strong>três colunas</strong>: código de barras,
+      nome do produto e categoria. <em>Não envie preço de custo, margem, dado de
+      fornecedor ou dado de cliente — não é necessário e não é usado.</em></li>
+    <li style="margin-bottom:12px">Recebe o termo de confidencialidade e declaração de
+      titularidade. O envio da planilha é o aceite.</li>
+    <li>Devolvo o relatório em PDF, com o link oficial de cada registro para conferência.</li>
+  </ol>
+
+  <p style="margin-top:26px"><strong>Prazo:</strong> até 24 horas após o recebimento da
+  planilha. <strong>Escopo:</strong> apenas o próprio catálogo — não analisamos catálogo
+  de terceiros.</p>
+
+  <a class="btn" href="mailto:alexsjordan@gmail.com?subject=Triagem%20de%20cat%C3%A1logo%20Inmetro&body=Ol%C3%A1%2C%20quero%20a%20triagem%20do%20meu%20cat%C3%A1logo.%0A%0ALoja%3A%20%0ACNPJ%3A%20%0APlataforma%3A%20%0AQuantidade%20de%20SKUs%3A%20">
+    Pedir a triagem do catálogo</a>
+</section>
+
+<section class="bloco">
+  <h2>O que você recebe</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Prioridade por consequência</h3>
+      <p>Primeiro o que pode gerar multa hoje. Depois o que pede conferência. Por
+      último, o que está em ordem.</p>
+    </div>
+    <div class="card">
+      <h3>Fonte em cada linha</h3>
+      <p>Número do registro, certificado e link oficial. Você confere sem depender
+      da nossa palavra.</p>
+    </div>
+    <div class="card">
+      <h3>Sem nome de terceiro</h3>
+      <p>O relatório não identifica fabricante, importador nem outra empresa. Ele
+      descreve a situação do seu código.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bloco aviso-legal">
+  <h2>O que este serviço não é</h2>
+  <p>É uma <strong>triagem</strong> feita sobre a base pública do Inmetro, não um laudo
+  de conformidade. Não certifica produto, não substitui organismo certificador e não
+  decide se o produto pode ser vendido — isso depende da categoria e do registro
+  válido. “Sem registro localizado” não significa produto irregular: a maior parte das
+  categorias não exige registro. A confirmação oficial é sempre o número do
+  certificado no site do Inmetro.</p>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <p><strong>Conformidade Inmetro</strong> — triagem de registro por código de barras.</p>
+    <p>Base de consulta: <a href="https://registro.inmetro.gov.br/consulta/" target="_blank" rel="noopener">registro.inmetro.gov.br</a></p>
+    <p class="mini">Este site não tem vínculo com o Inmetro. As informações são obtidas
+    da base pública oficial e podem ter defasagem de até um dia.</p>
+  </div>
+</footer>
+
+<script>
+function abrirConsulta(){
+  var v = document.getElementById('ean').value.replace(/\D/g,'');
+  var out = document.getElementById('resultado');
+  if(v.length < 8){
+    out.innerHTML = '<div class="res res-atencao"><h3>Código incompleto</h3><p>'
+      + 'Digite o código de barras completo, com 13 dígitos. Ele está na embalagem '
+      + 'ou na planilha de produtos do marketplace.</p></div>';
+    return;
+  }
+  var url = 'https://registro.inmetro.gov.br/consulta/';
+  out.innerHTML = '<div class="res res-ok">'
+    + '<h3>Código pronto: ' + v + '</h3>'
+    + '<p>Abra a consulta oficial e cole o código no campo <strong>Código de Barras</strong>. '
+    + 'A página abre em outra aba.</p>'
+    + '<p class="link"><a href="' + url + '" target="_blank" rel="noopener">'
+    + 'Abrir registro.inmetro.gov.br/consulta</a></p>'
+    + '<p style="margin-top:10px"><button type="button" onclick="copiar(\'' + v + '\')" '
+    + 'style="padding:10px 16px;border:0;border-radius:6px;background:#1A2026;color:#fff;'
+    + 'font-weight:700;cursor:pointer">Copiar o código</button></p></div>';
+  window.open(url, '_blank');
+}
+function copiar(t){
+  navigator.clipboard.writeText(t).then(function(){
+    alert('Código copiado: ' + t);
+  }, function(){
+    prompt('Copie manualmente:', t);
+  });
+}
+</script>
+
+</body>
+</html>
