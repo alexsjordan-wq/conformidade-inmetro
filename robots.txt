@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alexsjordan-wq.github.io/conformidade-inmetro/sitemap.xml
+Sitemap: https://conformidadeinmetro.com.br/sitemap.xml
